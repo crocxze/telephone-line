@@ -103,6 +103,9 @@ Adapted from doom-modeline."
 (telephone-line-defsegment telephone-line-file-name-absolute-path-segment ()
   buffer-file-name)
 
+(telephone-line-defsegment telephone-line-file-name-absolute-path-segment ()
+  buffer-file-truename)
+
 (telephone-line-defsegment* telephone-line-buffer-modified-segment ()
     (if (buffer-modified-p)
         (telephone-line-raw "!")
